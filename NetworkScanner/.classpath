@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<accessrules>
+			<accessrule kind="accessible" pattern="javafx/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/commons-net-3.3.jar" sourcepath="C:/Daten/Entwicklung/Java/Oxygen Workspace/NetworkScanner/lib/commons-net-3.3-javadoc.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Daten/Entwicklung/Java/Oxygen%20Workspace/NetworkScanner/lib/commons-net-3.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

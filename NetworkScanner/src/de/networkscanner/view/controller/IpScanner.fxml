@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import de.networkscanner.view.ui.IpRestrictedTextField?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.networkscanner.view.controller.IpController">
+   <children>
+      <RadioButton fx:id="subnetScanRBtn" layoutX="35.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleIpRadioButtons" selected="true" text="Subnetz scannen" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="25.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="ipScanBtns" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="singleScanRBtn" layoutX="45.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleIpRadioButtons" text="Einzelscan" toggleGroup="$ipScanBtns" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="55.0" />
+      <RadioButton fx:id="rangeScanRBtn" layoutX="26.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleIpRadioButtons" text="Bereich scannen" toggleGroup="$ipScanBtns" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="85.0" />
+      <IpRestrictedTextField fx:id="startIpTxt" disable="true" layoutX="244.0" layoutY="73.0" promptText="192.168.0.1" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="125.0" />
+      <IpRestrictedTextField fx:id="endIpTxt" disable="true" layoutX="210.0" layoutY="73.0" promptText="192.168.0.1" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="125.0" />
+      <Button fx:id="scanBtn" layoutX="24.0" layoutY="183.0" mnemonicParsing="false" onAction="#handleIpScanButton" prefHeight="25.0" prefWidth="108.0" text="Scan starten" textAlignment="CENTER" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="173.0" />
+      <Button fx:id="cancelBtn" disable="true" layoutX="223.0" layoutY="183.0" mnemonicParsing="false" onAction="#handleIpCancelButton" prefHeight="25.0" prefWidth="108.0" text="Abbrechen" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="173.0" />
+      <Text layoutX="35.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start-IP" wrappingWidth="120.13671875" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="110.0" />
+      <Text layoutX="45.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End-IP" wrappingWidth="120.13671875" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="110.0" />
+      <TextArea fx:id="resultsTxtArea" editable="false" layoutX="435.0" layoutY="16.0" prefHeight="200.0" prefWidth="330.0" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="6.0" />
+      <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="208.0" prefHeight="18.0" prefWidth="742.0" progress="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="215.0" />
+      <Button fx:id="subnetBtn" alignment="CENTER" layoutX="210.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleSubnetButton" prefHeight="25.0" prefWidth="111.0" text="Subnetz anzeigen" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="25.0" />
+   </children>
+</AnchorPane>

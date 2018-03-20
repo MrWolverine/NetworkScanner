@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="view.ui.RestrictedTextField" x="422" y="684">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="businesslogik.IpScanner" x="166" y="86">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="businesslogik.AbstractScanner"/>
+        <Communication destinationClassName="businesslogik.AbstractScanner"/>
+    </Class>
+    <Class name="view.ui.IpRestrictedTextField" x="306" y="442">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="view.ui.RestrictedTextField"/>
+    </Class>
+    <Class name="businesslogik.PortScanner" x="702" y="116">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="businesslogik.AbstractScanner"/>
+        <Communication destinationClassName="businesslogik.AbstractScanner"/>
+    </Class>
+    <Class name="businesslogik.AbstractScanner" x="412" y="98">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="view.ui.PortRestrictedTextField" x="742" y="650">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="view.ui.RestrictedTextField"/>
+    </Class>
+    <Class name="view.controller.IpController" x="60" y="289">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="businesslogik.IpScanner"
+            endpointName="ipScanner" kind="Simple"/>
+        <Association
+            destinationClassName="view.ui.IpRestrictedTextField"
+            endpointName="startIpTxt" kind="Simple"/>
+        <Association
+            destinationClassName="view.ui.IpRestrictedTextField"
+            endpointName="endIpTxt" kind="Simple"/>
+        <Communication destinationClassName="businesslogik.IpScanner"/>
+        <Communication destinationClassName="businesslogik.AbstractScanner"/>
+        <Communication destinationClassName="view.ui.InformationWindow"/>
+    </Class>
+    <Class name="view.ui.InformationWindow" x="494" y="584">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="view.ui.Main" x="438" y="456">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="view.controller.NetworkController"
+            endpointName="networkController" kind="Simple"/>
+        <Communication destinationClassName="view.controller.NetworkController"/>
+    </Class>
+    <Class name="view.controller.PortController" x="832" y="314">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="view.ui.PortRestrictedTextField"
+            endpointName="startPortTxt" kind="Simple"/>
+        <Association destinationClassName="businesslogik.PortScanner"
+            endpointName="portScanner" kind="Simple"/>
+        <Association
+            destinationClassName="view.ui.PortRestrictedTextField"
+            endpointName="endPortTxt" kind="Simple"/>
+        <Communication destinationClassName="businesslogik.AbstractScanner"/>
+        <Communication destinationClassName="view.ui.InformationWindow"/>
+    </Class>
+    <Class name="view.controller.NetworkController" x="442" y="314">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
